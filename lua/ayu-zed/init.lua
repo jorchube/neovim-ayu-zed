@@ -214,6 +214,10 @@ local function set_groups()
 
     -- Neo-tree.
     NeoTreeRootName = { fg = colors.fg, bold = true },
+    NeoTreeNormal = { bg = colors.zed_ui_bg },
+    NeoTreeNormalNC = { bg = colors.zed_ui_bg },
+    NeoTreeCursorLine = { bg = colors.zed_ui_highlighted_item_bg },
+
 
     -- WhichKey.
     WhichKeyFloat = { bg = colors.bg },
