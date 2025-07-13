@@ -47,7 +47,7 @@ local function set_groups()
     FoldColumn = { bg = colors.bg },
     SignColumn = { bg = colors.bg },
 
-    MatchParen = { sp = colors.func, underline = true },
+    MatchParen = { sp = colors.func, underline = true, bold = true },
     ModeMsg = { fg = colors.string },
     MoreMsg = { fg = colors.string },
     NonText = { fg = colors.guide_normal },
