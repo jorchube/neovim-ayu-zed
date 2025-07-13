@@ -154,6 +154,7 @@ local function set_groups()
 
     -- Telescope.
     TelescopePromptBorder = { fg = colors.accent },
+    TelescopeSelection = { bg = colors.selection_inactive },
 
     -- Cmp.
     CmpGhostText = { fg = colors.comment },
