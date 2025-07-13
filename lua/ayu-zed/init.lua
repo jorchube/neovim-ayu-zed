@@ -33,7 +33,8 @@ local function set_groups()
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
-    Cursor = { fg = colors.bg, bg = colors.fg },
+    Cursor = { fg = colors.bg, bg = colors.zed_cursor_bg },
+    TermCursor = { fg = colors.bg, bg = colors.zed_cursor_bg },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.zed_cursor_line_bg },
     CursorLineNr = { fg = colors.accent, bg = colors.zed_cursor_line_bg },
@@ -360,6 +361,7 @@ function ayu.colorscheme()
   vim.g.VM_theme_set_by_colorscheme = true -- Required for Visual Multi
   vim.o.termguicolors = true
   vim.g.colors_name = 'ayu-zed'
+  vim.o.guicursor = 'n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor'
 
   colors.generate(config.mirage)
   if config.terminal then
