@@ -1,6 +1,6 @@
-local colors = require('ayu.colors')
+local colors = require('ayu-zed.colors')
 
-local ayu = {
+local ayu-zed = {
   visual = {
     a = { fg = colors.bg, bg = colors.accent, gui = 'bold' },
     b = { fg = colors.accent, bg = colors.panel_border },
@@ -33,4 +33,4 @@ local ayu = {
   },
 }
 
-return ayu
+return ayu-zed

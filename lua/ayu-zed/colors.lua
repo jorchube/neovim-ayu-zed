@@ -2,7 +2,7 @@ local colors = {
   white = '#FFFFFF',
   black = '#000000',
 
-  -- This color is not part of `ayu` but matches the default style applied in VSCode.
+  -- This color is not part of `ayu-zed` but matches the default style applied in VSCode.
   lsp_inlay_hint = '#969696',
 }
 

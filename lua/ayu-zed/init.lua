@@ -1,6 +1,6 @@
-local colors = require('ayu.colors')
-local config = require('ayu.config')
-local ayu = {}
+local colors = require('ayu-zed.colors')
+local config = require('ayu-zed.config')
+local ayu-zed = {}
 
 --- Apply terminal highlighting.
 local function set_terminal_colors()
@@ -338,12 +338,12 @@ end
 
 --- Apply user settings.
 ---@param values table
-function ayu.setup(values) setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) }) end
+function ayu-zed.setup(values) setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) }) end
 
 --- Set the colorscheme.
-function ayu.colorscheme()
+function ayu-zed.colorscheme()
   if vim.version().minor < 8 then
-    vim.notify('Neovim 0.8+ is required for ayu colorscheme', vim.log.levels.ERROR, { title = 'Ayu colorscheme' })
+    vim.notify('Neovim 0.8+ is required for ayu-zed colorscheme', vim.log.levels.ERROR, { title = 'ayu-zed colorscheme' })
     return
   end
 
@@ -354,7 +354,7 @@ function ayu.colorscheme()
 
   vim.g.VM_theme_set_by_colorscheme = true -- Required for Visual Multi
   vim.o.termguicolors = true
-  vim.g.colors_name = 'ayu'
+  vim.g.colors_name = 'ayu-zed'
 
   colors.generate(config.mirage)
   if config.terminal then
@@ -363,4 +363,4 @@ function ayu.colorscheme()
   set_groups()
 end
 
-return ayu
+return ayu-zed
