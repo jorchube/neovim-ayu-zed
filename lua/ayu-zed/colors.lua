@@ -15,7 +15,8 @@ function colors.generate(mirage)
   colors.zed_ui_highlighted_item_bg = '#53565d'
   colors.zed_cursor_line_bg = '#323540'
   colors.zed_cursor_bg = '#73cfff'
-  colors.zed_highlighted_bg = '#40718c'
+  colors.zed_highlighted_bg = '#3d566a'
+  colors.zed_normal_bg = '#222635'
 
   if vim.o.background == 'dark' then
     if mirage then

@@ -4,7 +4,7 @@ local ayu = {}
 
 --- Apply terminal highlighting.
 local function set_terminal_colors()
-  vim.g.terminal_color_0 = colors.bg
+  vim.g.terminal_color_0 = colors.zed_normal_bg
   vim.g.terminal_color_1 = colors.markup
   vim.g.terminal_color_2 = colors.string
   vim.g.terminal_color_3 = colors.accent
@@ -20,7 +20,7 @@ local function set_terminal_colors()
   vim.g.terminal_color_13 = colors.constant
   vim.g.terminal_color_14 = colors.regexp
   vim.g.terminal_color_15 = colors.comment
-  vim.g.terminal_color_background = colors.bg
+  vim.g.terminal_color_background = colors.zed_normal_bg
   vim.g.terminal_color_foreground = colors.fg
 end
 
@@ -28,13 +28,13 @@ end
 local function set_groups()
   local groups = {
     -- Base.
-    Normal = { fg = colors.fg, bg = colors.bg },
-    NormalFloat = { bg = colors.bg },
+    Normal = { fg = colors.fg, bg = colors.zed_normal_bg },
+    NormalFloat = { bg = colors.zed_normal_bg },
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
-    Cursor = { fg = colors.bg, bg = colors.zed_cursor_bg },
-    TermCursor = { fg = colors.bg, bg = colors.zed_cursor_bg },
+    Cursor = { fg = colors.zed_normal_bg, bg = colors.zed_cursor_bg },
+    TermCursor = { fg = colors.zed_normal_bg, bg = colors.zed_cursor_bg },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.zed_cursor_line_bg },
     CursorLineNr = { fg = colors.accent, bg = colors.zed_cursor_line_bg },
@@ -45,8 +45,8 @@ local function set_groups()
     WinSeparator = { fg = colors.zed_ui_separator_fg, bg = colors.zed_ui_separator_bg },
     VertSplit = { link = 'WinSeparator' },
     Folded = { fg = colors.fg_idle, bg = colors.panel_bg },
-    FoldColumn = { bg = colors.bg },
-    SignColumn = { bg = colors.bg },
+    FoldColumn = { bg = colors.zed_normal_bg },
+    SignColumn = { bg = colors.zed_normal_bg },
 
     MatchParen = { sp = colors.func, underline = true, bold = true },
     ModeMsg = { fg = colors.string },
@@ -55,8 +55,8 @@ local function set_groups()
     Pmenu = { fg = colors.fg, bg = colors.selection_inactive },
     PmenuSel = { fg = colors.fg, bg = colors.selection_inactive, reverse = true },
     Question = { fg = colors.string },
-    Search = { fg = colors.bg, bg = colors.constant },
-    CurSearch = { fg = colors.bg, bg = colors.special },
+    Search = { fg = colors.zed_normal_bg, bg = colors.constant },
+    CurSearch = { fg = colors.zed_normal_bg, bg = colors.special },
     IncSearch = { fg = colors.keyword, bg = colors.selection_inactive },
     SpecialKey = { fg = colors.selection_inactive },
     SpellCap = { sp = colors.tag, undercurl = true },
@@ -68,7 +68,7 @@ local function set_groups()
     WildMenu = { fg = colors.fg, bg = colors.markup },
     TabLine = { fg = colors.comment, bg = colors.panel_shadow },
     TabLineFill = { fg = colors.fg, bg = colors.panel_border },
-    TabLineSel = { fg = colors.fg, bg = colors.bg },
+    TabLineSel = { fg = colors.fg, bg = colors.zed_normal_bg },
     Title = { fg = colors.keyword, bg = colors.zed_ui_bg },
     Visual = { bg = colors.zed_highlighted_bg },
     WarningMsg = { fg = colors.warning },
@@ -242,9 +242,9 @@ local function set_groups()
 
     -- Leap.
     LeapMatch = { fg = colors.regexp, underline = true },
-    LeapLabelPrimary = { fg = colors.bg, bg = colors.regexp },
-    LeapLabelSecondary = { fg = colors.bg, bg = colors.entity },
-    LeapLabelSelected = { fg = colors.bg, bg = colors.tag },
+    LeapLabelPrimary = { fg = colors.zed_normal_bg, bg = colors.regexp },
+    LeapLabelSecondary = { fg = colors.zed_normal_bg, bg = colors.entity },
+    LeapLabelSelected = { fg = colors.zed_normal_bg, bg = colors.tag },
 
     -- LSP Inlay Hints.
     LspInlayHint = { fg = colors.lsp_inlay_hint },
@@ -287,14 +287,14 @@ local function set_groups()
     VM_Extend = { bg = colors.selection_inactive },
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
     VM_Insert = { sp = colors.fg, underline = true },
-    VM_Mono = { fg = colors.bg, bg = colors.comment },
+    VM_Mono = { fg = colors.zed_normal_bg, bg = colors.comment },
 
     -- Mini.
     MiniFilesTitleFocused = { fg = colors.fg, bold = true },
-    MiniHipatternsFixme = { fg = colors.bg, bg = colors.error, bold = true },
-    MiniHipatternsHack = { fg = colors.bg, bg = colors.keyword, bold = true },
-    MiniHipatternsTodo = { fg = colors.bg, bg = colors.tag, bold = true },
-    MiniHipatternsNote = { fg = colors.bg, bg = colors.regexp, bold = true },
+    MiniHipatternsFixme = { fg = colors.zed_normal_bg, bg = colors.error, bold = true },
+    MiniHipatternsHack = { fg = colors.zed_normal_bg, bg = colors.keyword, bold = true },
+    MiniHipatternsTodo = { fg = colors.zed_normal_bg, bg = colors.tag, bold = true },
+    MiniHipatternsNote = { fg = colors.zed_normal_bg, bg = colors.regexp, bold = true },
     MiniIconsAzure = { fg = colors.tag },
     MiniIconsBlue = { fg = colors.entity },
     MiniIconsCyan = { fg = colors.regexp },
@@ -317,19 +317,19 @@ local function set_groups()
     MiniStatuslineFileinfo = { fg = colors.fg, bg = colors.zed_ui_bg },
     MiniStatuslineFilename = { fg = colors.fg_idle, bg = colors.zed_ui_bg },
     MiniStatuslineInactive = { fg = colors.fg_idle, bg = colors.zed_ui_bg },
-    MiniStatuslineModeCommand = { fg = colors.bg, bg = colors.keyword, bold = true },
-    MiniStatuslineModeInsert = { fg = colors.bg, bg = colors.string, bold = true },
-    MiniStatuslineModeNormal = { fg = colors.bg, bg = colors.entity, bold = true },
-    MiniStatuslineModeOther = { fg = colors.bg, bg = colors.regexp, bold = true },
-    MiniStatuslineModeReplace = { fg = colors.bg, bg = colors.markup, bold = true },
-    MiniStatuslineModeVisual = { fg = colors.bg, bg = colors.accent, bold = true },
-    MiniTablineCurrent = { fg = colors.fg, bg = colors.bg, bold = true },
+    MiniStatuslineModeCommand = { fg = colors.zed_normal_bg, bg = colors.keyword, bold = true },
+    MiniStatuslineModeInsert = { fg = colors.zed_normal_bg, bg = colors.string, bold = true },
+    MiniStatuslineModeNormal = { fg = colors.zed_normal_bg, bg = colors.entity, bold = true },
+    MiniStatuslineModeOther = { fg = colors.zed_normal_bg, bg = colors.regexp, bold = true },
+    MiniStatuslineModeReplace = { fg = colors.zed_normal_bg, bg = colors.markup, bold = true },
+    MiniStatuslineModeVisual = { fg = colors.zed_normal_bg, bg = colors.accent, bold = true },
+    MiniTablineCurrent = { fg = colors.fg, bg = colors.zed_normal_bg, bold = true },
     MiniTablineFill = { fg = colors.fg, bg = colors.panel_border },
     MiniTablineHidden = { fg = colors.comment, bg = colors.panel_shadow },
-    MiniTablineModifiedCurrent = { fg = colors.bg, bg = colors.fg, bold = true },
+    MiniTablineModifiedCurrent = { fg = colors.zed_normal_bg, bg = colors.fg, bold = true },
     MiniTablineModifiedHidden = { fg = colors.panel_shadow, bg = colors.comment },
-    MiniTablineModifiedVisible = { fg = colors.bg, bg = colors.fg },
-    MiniTablineVisible = { fg = colors.fg, bg = colors.bg },
+    MiniTablineModifiedVisible = { fg = colors.zed_normal_bg, bg = colors.fg },
+    MiniTablineVisible = { fg = colors.fg, bg = colors.zed_normal_bg },
     MiniTestFail = { fg = colors.error, bold = true },
     MiniTestPass = { fg = colors.string, bold = true },
     MiniTrailspace = { bg = colors.vcs_removed },
