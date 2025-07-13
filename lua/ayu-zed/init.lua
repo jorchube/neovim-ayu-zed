@@ -35,8 +35,8 @@ local function set_groups()
     ColorColumn = { bg = colors.line },
     Cursor = { fg = colors.bg, bg = colors.fg },
     CursorColumn = { bg = colors.line },
-    CursorLine = { bg = colors.line },
-    CursorLineNr = { fg = colors.accent, bg = colors.line },
+    CursorLine = { bg = colors.zed_cursor_line_bg },
+    CursorLineNr = { fg = colors.accent, bg = colors.zed_cursor_line_bg },
     LineNr = { fg = colors.guide_normal },
 
     Directory = { fg = colors.func },
