@@ -10,6 +10,8 @@ local colors = {
 ---@param mirage boolean: Whether to use `mirage` variant when `vim.o.background` is dark.
 function colors.generate(mirage)
   colors.zed_ui_bg = '#353845'
+  colors.zed_ui_separator_fg = '#4d4f58'
+  colors.zed_ui_separator_bg = '#353845'
   colors.zed_ui_highlighted_item_bg = '#53565d'
   colors.zed_cursor_line_bg = '#323540'
   colors.zed_cursor_bg = '#73cfff'

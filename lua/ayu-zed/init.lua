@@ -42,7 +42,7 @@ local function set_groups()
 
     Directory = { fg = colors.func },
     ErrorMsg = { fg = colors.error },
-    WinSeparator = { fg = colors.panel_border, bg = colors.bg },
+    WinSeparator = { fg = colors.zed_ui_separator_fg, bg = colors.zed_ui_separator_bg },
     VertSplit = { link = 'WinSeparator' },
     Folded = { fg = colors.fg_idle, bg = colors.panel_bg },
     FoldColumn = { bg = colors.bg },
@@ -219,7 +219,6 @@ local function set_groups()
     NeoTreeNormal = { bg = colors.zed_ui_bg },
     NeoTreeNormalNC = { bg = colors.zed_ui_bg },
     NeoTreeCursorLine = { bg = colors.zed_ui_highlighted_item_bg },
-
 
     -- WhichKey.
     WhichKeyFloat = { bg = colors.zed_ui_bg },
