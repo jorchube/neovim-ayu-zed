@@ -222,7 +222,8 @@ local function set_groups()
 
 
     -- WhichKey.
-    WhichKeyFloat = { bg = colors.bg },
+    WhichKeyFloat = { bg = colors.zed_ui_bg },
+    WhichKeyNormal = { bg = colors.zed_ui_bg },
 
     -- Indent blankline.
     IndentBlanklineContextChar = { fg = colors.comment },
