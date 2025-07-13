@@ -9,6 +9,12 @@ local colors = {
 --- Generate colors based `vim.o.background` and a variant.
 ---@param mirage boolean: Whether to use `mirage` variant when `vim.o.background` is dark.
 function colors.generate(mirage)
+  colors.zed_ui_bg = '#353845'
+  colors.zed_ui_highlighted_item_bg = '#53565d'
+  colors.zed_cursor_line_bg = '#323540'
+  colors.zed_cursor_bg = '#73cfff'
+  colors.zed_highlighted_bg = '#40718c'
+
   if vim.o.background == 'dark' then
     if mirage then
       colors.accent = '#FFCC66'
